@@ -1,3 +1,7 @@
+.no-display {
+  display: none;
+}
+
 .control-container-top {
   position: relative;
   width: 60%;
@@ -7,6 +11,12 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .control-container-top {
+    min-width: 320px;
+  }
 }
 
 .control-top-header {
@@ -27,6 +37,18 @@
   color: white;
 }
 
+.show-quests {
+  color: white;
+  position: absolute;
+  left: 12px;
+}
+
+.show-description {
+  position: absolute;
+  right: 12px;
+  color: white;
+}
+
 .mid-content-holder {
   width: 60%;
   height: 590px;
@@ -38,50 +60,87 @@
   flex-direction: row;
 }
 
-.left-content-holder {
-  width: 50%;
-  height: 610px;
-  padding-right: 5px;
-  margin-right: 5px;
-  overflow: hidden;
-}
-
-#left-scroll::-webkit-scrollbar {
-  background: transparent;
-}
-
-#right-scroll::-webkit-scrollbar {
-  background: transparent;
+@media only screen and (max-width: 600px) {
+  .mid-content-holder {
+    min-width: 320px;
+  }
 }
 
 .quests {
-  width: 100%;
-  height: 600px;
+  margin-right: 1%;
+  width: 49%;
+  height: 570px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
   border: 1px solid rgb(31, 31, 31);
-  background: rgba(0, 0, 0, 0.596);
+  background: rgba(26, 26, 26, 0.596);
   border-radius: 10px;
-  overflow-y: scroll;
   box-shadow: inset 0 0 30px rgba(41, 41, 41, 0.3),
-    inset 0 0 10px rgba(29, 29, 29, 0.4), inset 0 0 30px rgba(0, 0, 0, 0.8);
-  white-space: normal;
+    inset 0 0 10px rgba(29, 29, 29, 0.4), inset 0 0 30px rgba(20, 20, 20, 0.8);
 }
 
 .quest-content {
-  padding: 15px;
+  height: 570px;
+  padding-right: 15px;
+  width: auto;
+  overflow-y: scroll;
 }
 
-.right-content-holder {
-  width: 50%;
-  height: 600px;
-  padding-right: 5px;
-  overflow: hidden;
+/*LEFT SCROLL BAR */
+
+#left-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+#left-scroll::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+}
+
+/* Handle */
+#left-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid #3f0200;
+  background: rgb(56, 56, 56);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.25), inset 0 0 6px #c52112,
+    inset 0 80px 80px -40px #610401;
+}
+
+/*RIGHT SCROLL BAR */
+
+#right-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+#right-scroll::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border: 1px solid #ccac71;
+  border-radius: 10px;
+}
+
+/* Handle */
+#right-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid #462e00;
+  background: rgb(88, 60, 1);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.25), inset 0 0 6px #e2ae4d,
+    inset 0 80px 80px -40px #613f01;
 }
 
 .quests-description {
-  width: 100%;
-  height: 600px;
+  margin-left: 1%;
+  width: 49%;
+  height: 570px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
   border: 1px solid rgb(146, 103, 10);
-  overflow-y: scroll;
   border-radius: 10px;
   background-color: #d6bb98;
   background-image: linear-gradient(
@@ -96,7 +155,10 @@
 }
 
 .quests-description-content {
-  padding: 15px;
+  height: 570px;
+  padding-right: 15px;
+  width: auto;
+  overflow-y: scroll;
 }
 
 .control-container-bottom {
@@ -106,6 +168,12 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .control-container-bottom {
+    min-width: 320px;
+  }
 }
 
 .bottom-control-buttons {
